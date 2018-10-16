@@ -144,19 +144,10 @@
                     <view key="view" contentMode="scaleToFill" id="i3w-M4-GWO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dash Board" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="439-YP-PrM">
-                                <rect key="frame" x="103" y="44" width="168" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xJR-Kq-jPS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="Be0-pY-Mq2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="businessman" id="Be0-pY-Mq2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbx-86-6da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,7 +163,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2Q1-HT-mKF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chats" id="y9I-TT-F2l"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="chat" id="y9I-TT-F2l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZD-CM-YMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,10 +176,19 @@
                     <view key="view" contentMode="scaleToFill" id="1al-HI-McT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dash Board" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="439-YP-PrM">
+                                <rect key="frame" x="103" y="44" width="168" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M72-02-4HJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dash Board" id="D4X-XU-0eT"/>
+                    <tabBarItem key="tabBarItem" title="Dash Board" image="settings" id="D4X-XU-0eT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hme-ds-XTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +204,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c8s-GM-Jrg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Announcements" id="SmM-HC-jtX"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="advertising" id="SmM-HC-jtX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4v-07-KUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,4 +403,10 @@
             <point key="canvasLocation" x="-639" y="-771"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="advertising" width="30" height="30"/>
+        <image name="businessman" width="30" height="30"/>
+        <image name="chat" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
