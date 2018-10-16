@@ -19,6 +19,7 @@ struct User {
     var email:String
     var password:String
     var mobile:Int
+    var dob:String
     var address:Address
 }
 struct UsersRepo {
@@ -26,7 +27,7 @@ struct UsersRepo {
     private var users:[User]
     let address:Address = Address(firstLine: "1115 N College Drive",city: "Maryville", state: "MO", zip: 64468)
     init() {
-        users = [User(user_id: "batman",name: "bruce",email:"bat@cave.com", password: "batMobile", mobile: 6605280403,address:address), User(user_id: "superman",name: "kent",email:"super@krypton.com", password: "superBoy", mobile: 6605280403,address:address)]
+        users = [User(user_id: "batman",name: "bruce",email:"bat@cave.com", password: "batMobile", mobile: 6605280403,dob: "12/08/1988",address:address), User(user_id: "superman",name: "kent",email:"super@krypton.com", password: "superBoy", mobile: 6605280403,dob: "11/05/1947",address:address)]
     }
     mutating func addUser(_ user:User) {
         users.append(user)
