@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
@@ -26,6 +26,7 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +50,7 @@ class RegistrationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func onRegister(_ sender: Any) {
         
         let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
