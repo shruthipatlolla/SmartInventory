@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, UITextFieldDelegate{
+class RegistrationViewController: UIViewController{
 
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
@@ -23,7 +23,18 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
     
+    @IBAction func onDob(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
+    }
     
+    @objc func handleDatePicker(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        dobTF.text = dateFormatter.string(from: sender.date)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
@@ -57,7 +68,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate{
                         email:emailIdTF.text!, password: passwordTF.text!, mobile: Int(mobileNumberTF.text!)!,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
         UsersRepo.users.addUser(user)
         display(title: "Success", msg: "Registered successfully" )
-        
         
     }
     
