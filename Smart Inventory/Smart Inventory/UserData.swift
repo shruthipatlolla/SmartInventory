@@ -23,7 +23,7 @@ struct User {
     var address:Address
 }
 struct UsersRepo {
-    static let users = UsersRepo()
+    static var users = UsersRepo()
     private var users:[User]
     let address:Address = Address(firstLine: "1115 N College Drive",city: "Maryville", state: "MO", zip: 64468)
     init() {

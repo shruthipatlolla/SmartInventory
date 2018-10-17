@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Smart_Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Smart_Inventory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +292,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Line 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-En-AeM">
                                 <rect key="frame" x="33" y="379" width="319" height="30"/>
@@ -369,7 +369,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qS-k5-9Zc">
                                 <rect key="frame" x="200" y="109" width="152" height="30"/>
@@ -393,9 +393,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nII-qU-Iy8">
-                                <rect key="frame" x="16" y="740" width="343" height="30"/>
+                                <rect key="frame" x="16" y="737" width="343" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="EEr-0J-DdQ" eventType="touchUpInside" id="6k3-nn-gj3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK1-iE-s3N">
                                 <rect key="frame" x="16" y="699" width="343" height="30"/>
@@ -409,6 +412,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V6O-td-Ivp"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTF" destination="IgE-En-AeM" id="fML-wv-ley"/>
+                        <outlet property="cityTF" destination="4my-JD-Ddt" id="f3Y-rc-fcV"/>
+                        <outlet property="confirmPasswordTF" destination="rnl-rs-WEa" id="s2A-dN-gKU"/>
+                        <outlet property="dobTF" destination="Ki5-pA-isv" id="TOW-vO-vQ4"/>
+                        <outlet property="emailIdTF" destination="SJT-2F-Epy" id="m4u-gn-vxh"/>
+                        <outlet property="firstNameTF" destination="XaU-SS-qQh" id="CKr-X5-FBh"/>
+                        <outlet property="lastNameTF" destination="6qS-k5-9Zc" id="7gz-xv-CVW"/>
+                        <outlet property="mobileNumberTF" destination="1WB-Kg-gwG" id="tTO-tM-kld"/>
+                        <outlet property="passwordTF" destination="HcL-MM-u0V" id="Ef0-tp-i5t"/>
+                        <outlet property="stateTF" destination="Ezt-Bv-mch" id="eIZ-Zl-RXN"/>
+                        <outlet property="userIdTF" destination="DfN-EB-GqC" id="g3T-ca-iZc"/>
+                        <outlet property="zipTF" destination="iAO-By-LFo" id="nJG-AA-qfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9m9-vK-GBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
