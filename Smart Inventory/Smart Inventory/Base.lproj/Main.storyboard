@@ -340,7 +340,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="address-line1"/>
+                                <connections>
+                                    <action selector="onDob:" destination="EEr-0J-DdQ" eventType="editingDidBegin" id="urE-ps-OrC"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4my-JD-Ddt">
                                 <rect key="frame" x="33" y="426" width="87" height="30"/>
@@ -443,7 +446,7 @@
                         <outlet property="addressTF" destination="IgE-En-AeM" id="fML-wv-ley"/>
                         <outlet property="cityTF" destination="4my-JD-Ddt" id="f3Y-rc-fcV"/>
                         <outlet property="confirmPasswordTF" destination="rnl-rs-WEa" id="s2A-dN-gKU"/>
-                        <outlet property="dobTF" destination="Ki5-pA-isv" id="gmH-gY-gy6"/>
+                        <outlet property="dobTF" destination="Ki5-pA-isv" id="TOW-vO-vQ4"/>
                         <outlet property="emailIdTF" destination="SJT-2F-Epy" id="m4u-gn-vxh"/>
                         <outlet property="firstNameTF" destination="XaU-SS-qQh" id="CKr-X5-FBh"/>
                         <outlet property="lastNameTF" destination="6qS-k5-9Zc" id="7gz-xv-CVW"/>
