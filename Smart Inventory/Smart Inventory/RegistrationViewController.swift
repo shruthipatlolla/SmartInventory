@@ -14,7 +14,9 @@ class RegistrationViewController: UIViewController{
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var userIdTF: UITextField!
     @IBOutlet weak var emailIdTF: UITextField!
+    
     @IBOutlet weak var dobTF: UITextField!
+    
     @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var cityTF: UITextField!
     @IBOutlet weak var stateTF: UITextField!
