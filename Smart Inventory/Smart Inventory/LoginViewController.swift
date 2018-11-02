@@ -11,6 +11,9 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
+    @IBAction func register(segue:UIStoryboardSegue){}
+    @IBAction func cancel(segue:UIStoryboardSegue){}
+    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     

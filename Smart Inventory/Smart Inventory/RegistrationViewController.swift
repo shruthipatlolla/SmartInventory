@@ -44,16 +44,6 @@ class RegistrationViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-    func display(title:String, msg:String) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
-            let view = self.storyboard?.instantiateViewController(withIdentifier: "loginvc")
-            self.present(view!, animated: true, completion: nil)
-        }
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
-
     /*
     // MARK: - Navigation
 
@@ -64,7 +54,7 @@ class RegistrationViewController: UIViewController{
     }
     */
     
-    @IBAction func onRegister(_ sender: Any) {
+    /* @IBAction func onRegister(_ sender: Any) {
         
         let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
                         email:emailIdTF.text!, password: passwordTF.text!, mobile: Int(mobileNumberTF.text!)!,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
@@ -77,6 +67,71 @@ class RegistrationViewController: UIViewController{
         let view = self.storyboard?.instantiateViewController(withIdentifier: "loginvc")
         self.present(view!, animated: true, completion: nil)
     }
+    */
+    
+    func isValidEmail(email:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let validEmail = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return validEmail.evaluate(with: email)
+    }
+    
+    func isValidMobileNumber(mobileNumber: String) -> Bool {
+        return mobileNumber.count == 10
+    }
+    
+    func isValidPassword(password:String) -> Bool{
+        return password.count >= 8
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "register"{
+            
+                let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
+                                email:emailIdTF.text!, password: passwordTF.text!,
+                                mobile: Int(mobileNumberTF.text!) ?? 0,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
+                UsersRepo.users.addUser(user)
+                displayAlert(msg: "Registered successfully")
+            
+                    }
+    }
+    
+    func displayAlert(msg: String){
+        let  alert  =  UIAlertController(title:  "Alert",  message: msg,  preferredStyle:  .alert)
+        alert.addAction(UIAlertAction(title:  "OK",  style:  .default,  handler:  nil))
+        self.present(alert,  animated:  true,  completion:  nil)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "register" {
+            
+            if firstNameTF.text!.isEmpty || lastNameTF.text!.isEmpty || emailIdTF.text!.isEmpty || passwordTF.text!.isEmpty || confirmPasswordTF.text!.isEmpty || mobileNumberTF.text!.isEmpty || dobTF.text!.isEmpty || addressTF.text!.isEmpty || cityTF.text!.isEmpty || stateTF.text!.isEmpty || stateTF.text!.isEmpty || zipTF.text!.isEmpty || userIdTF.text!.isEmpty  {
+                displayAlert(msg: "Enter values for all the fields")
+                return false
+            }
+            if (!isValidEmail(email: emailIdTF.text!)){
+                displayAlert(msg: "Inavlid Email ID")
+                return false;
+            }
+            if (!isValidMobileNumber(mobileNumber: mobileNumberTF.text!)){
+                displayAlert(msg: "Invalid Mobile Number")
+            }
+            if(!isValidPassword(password : passwordTF.text!)){
+                displayAlert(msg: "Enter Password of length more than 8")
+                return false
+            }
+            if(passwordTF.text! != confirmPasswordTF.text!){
+                displayAlert(msg: "Password is Unmatched")
+                return false;
+            }
+            
+        }
+        return true;
+    }
+    
     
     
 }

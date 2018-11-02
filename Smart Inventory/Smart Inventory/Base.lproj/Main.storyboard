@@ -427,7 +427,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <action selector="onCancel:" destination="EEr-0J-DdQ" eventType="touchUpInside" id="6k3-nn-gj3"/>
+                                    <segue destination="UDe-hN-cc8" kind="unwind" identifier="cancelRegistration" unwindAction="cancelWithSegue:" id="lCj-lt-Grg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK1-iE-s3N">
@@ -435,7 +435,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <action selector="onRegister:" destination="EEr-0J-DdQ" eventType="touchUpInside" id="KTS-8n-aNq"/>
+                                    <segue destination="UDe-hN-cc8" kind="unwind" identifier="register" unwindAction="registerWithSegue:" id="DO2-TD-hEd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -458,8 +458,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9m9-vK-GBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UDe-hN-cc8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-639.20000000000005" y="-771.42857142857144"/>
+            <point key="canvasLocation" x="1158" y="-36"/>
         </scene>
     </scenes>
     <resources>
