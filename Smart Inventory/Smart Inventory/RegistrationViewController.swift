@@ -9,7 +9,9 @@
 import UIKit
 
 class RegistrationViewController: UIViewController{
-
+    
+    var  backendless  =  Backendless.sharedInstance()
+    
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var userIdTF: UITextField!
@@ -40,34 +42,34 @@ class RegistrationViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
-
+        
         // Do any additional setup after loading the view.
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     /* @IBAction func onRegister(_ sender: Any) {
-        
-        let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
-                        email:emailIdTF.text!, password: passwordTF.text!, mobile: Int(mobileNumberTF.text!)!,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
-        UsersRepo.users.addUser(user)
-        display(title: "Success", msg: "Registered successfully" )
-        
-    }
-    
-    @IBAction func onCancel(_ sender: Any) {
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "loginvc")
-        self.present(view!, animated: true, completion: nil)
-    }
-    */
+     
+     let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
+     email:emailIdTF.text!, password: passwordTF.text!, mobile: Int(mobileNumberTF.text!)!,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
+     UsersRepo.users.addUser(user)
+     display(title: "Success", msg: "Registered successfully" )
+     
+     }
+     
+     @IBAction func onCancel(_ sender: Any) {
+     let view = self.storyboard?.instantiateViewController(withIdentifier: "loginvc")
+     self.present(view!, animated: true, completion: nil)
+     }
+     */
     
     func isValidEmail(email:String) -> Bool {
         // print("validate calendar: \(testStr)")
@@ -90,13 +92,27 @@ class RegistrationViewController: UIViewController{
         // Pass the selected object to the new view controller.
         if segue.identifier == "register"{
             
-                let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
-                                email:emailIdTF.text!, password: passwordTF.text!,
-                                mobile: Int(mobileNumberTF.text!) ?? 0,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
-                UsersRepo.users.addUser(user)
-                displayAlert(msg: "Registered successfully")
+            let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
+                            email:emailIdTF.text!, password: passwordTF.text!,
+                            mobile: Int(mobileNumberTF.text!) ?? 0,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
+            UsersRepo.users.addUser(user)
             
-                    }
+            //saving user to Backendless
+            //Established a connection , need to work
+            let userBackend = BackendlessUser()
+            
+            userBackend.name = firstNameTF.text! as NSString
+            userBackend.email = emailIdTF.text! as NSString
+            userBackend.password = passwordTF.text! as NSString
+            userBackend.setProperty("mobile", object: mobileNumberTF.text! as NSString)
+            
+            let registeredUser = self.backendless?.userService.register(userBackend)
+            print("User has been registered (SYNC): \(String(describing: registeredUser))")
+            
+            
+            displayAlert(msg: "Registered successfully")
+            
+        }
     }
     
     func displayAlert(msg: String){

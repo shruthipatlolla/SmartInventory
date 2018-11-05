@@ -11,13 +11,24 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let  APP_ID  =  "388C88F0-9D31-2F50-FFC1-AFC261CEED00"
+    let  API_KEY  =  "B10D1AAE-8EB5-FCE4-FFB0-C94B111CFA00"
+    
+    var  backendless  =  Backendless.sharedInstance()
+    
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        backendless!.initApp(APP_ID, apiKey:API_KEY)
         return true
     }
+    
+   /* func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
+    } */
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

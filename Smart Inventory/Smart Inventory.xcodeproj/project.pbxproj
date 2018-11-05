@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B02F38A804E8ED0E8B9CF2B /* Pods_Smart_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */; };
 		3F4266F22175777E00747566 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4266F12175777E00747566 /* UserData.swift */; };
 		876CF7982167D4240015A6C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF7972167D4240015A6C8 /* RegistrationViewController.swift */; };
 		C79D808C216530F400A0AEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D808B216530F400A0AEFB /* AppDelegate.swift */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		3F4266F12175777E00747566 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Inventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E7F6C5E2C09410BB61ED25 /* Pods-Smart Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory.debug.xcconfig"; sourceTree = "<group>"; };
 		876CF7972167D4240015A6C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		C79D8088216530F400A0AEFB /* Smart Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Inventory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79D808B216530F400A0AEFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C79D8092216530F500A0AEFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C79D8095216530F500A0AEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C79D8097216530F500A0AEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED859B749FB4A430C8B54684 /* Pods-Smart Inventory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Inventory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B02F38A804E8ED0E8B9CF2B /* Pods_Smart_Inventory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA7A8B76851248B434DB165 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B910992437B16B72B9EF75C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82E7F6C5E2C09410BB61ED25 /* Pods-Smart Inventory.debug.xcconfig */,
+				ED859B749FB4A430C8B54684 /* Pods-Smart Inventory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C79D807F216530F400A0AEFB = {
 			isa = PBXGroup;
 			children = (
 				C79D808A216530F400A0AEFB /* Smart Inventory */,
 				C79D8089216530F400A0AEFB /* Products */,
+				3B910992437B16B72B9EF75C /* Pods */,
+				0FA7A8B76851248B434DB165 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C79D809A216530F500A0AEFB /* Build configuration list for PBXNativeTarget "Smart Inventory" */;
 			buildPhases = (
+				819AAA3125B155B6E32D5BE8 /* [CP] Check Pods Manifest.lock */,
 				C79D8084216530F400A0AEFB /* Sources */,
 				C79D8085216530F400A0AEFB /* Frameworks */,
 				C79D8086216530F400A0AEFB /* Resources */,
+				3A062E1F7EE2546D2EA9E51F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A062E1F7EE2546D2EA9E51F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		819AAA3125B155B6E32D5BE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Inventory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C79D8084216530F400A0AEFB /* Sources */ = {
@@ -288,6 +363,7 @@
 		};
 		C79D809B216530F500A0AEFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E7F6C5E2C09410BB61ED25 /* Pods-Smart Inventory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.smart.inventory.Smart-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +382,7 @@
 		};
 		C79D809C216530F500A0AEFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED859B749FB4A430C8B54684 /* Pods-Smart Inventory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.smart.inventory.Smart-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
