@@ -12,12 +12,9 @@ class RegistrationViewController: UIViewController{
     
     var  backendless  =  Backendless.sharedInstance()
     
-    @IBOutlet weak var firstNameTF: UITextField!
-    @IBOutlet weak var lastNameTF: UITextField!
-    @IBOutlet weak var userIdTF: UITextField!
+   
+    @IBOutlet weak var fullNameTF: UITextField!
     @IBOutlet weak var emailIdTF: UITextField!
-    
-    @IBOutlet weak var dobTF: UITextField!
     
     @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var cityTF: UITextField!
@@ -27,18 +24,6 @@ class RegistrationViewController: UIViewController{
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
     
-    @IBAction func onDob(_ sender: UITextField) {
-        let datePickerView = UIDatePicker()
-        datePickerView.datePickerMode = .date
-        sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
-    }
-    
-    @objc func handleDatePicker(sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        dobTF.text = dateFormatter.string(from: sender.date)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
@@ -97,7 +82,7 @@ class RegistrationViewController: UIViewController{
             //Established a connection , need to work
             let userBackend = BackendlessUser()
             
-            userBackend.name = firstNameTF.text! as NSString
+            userBackend.name = fullNameTF.text! as NSString
             userBackend.email = emailIdTF.text! as NSString
             userBackend.password = passwordTF.text! as NSString
             userBackend.setProperty("mobile", object: mobileNumberTF.text! as NSString)
@@ -120,7 +105,7 @@ class RegistrationViewController: UIViewController{
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "register" {
             
-            if firstNameTF.text!.isEmpty || lastNameTF.text!.isEmpty || emailIdTF.text!.isEmpty || passwordTF.text!.isEmpty || confirmPasswordTF.text!.isEmpty || mobileNumberTF.text!.isEmpty || dobTF.text!.isEmpty || addressTF.text!.isEmpty || cityTF.text!.isEmpty || stateTF.text!.isEmpty || stateTF.text!.isEmpty || zipTF.text!.isEmpty || userIdTF.text!.isEmpty  {
+            if fullNameTF.text!.isEmpty || emailIdTF.text!.isEmpty || passwordTF.text!.isEmpty || confirmPasswordTF.text!.isEmpty || mobileNumberTF.text!.isEmpty || addressTF.text!.isEmpty || cityTF.text!.isEmpty || stateTF.text!.isEmpty || stateTF.text!.isEmpty || zipTF.text!.isEmpty {
                 displayAlert(msg: "Enter values for all the fields")
                 return false
             }
