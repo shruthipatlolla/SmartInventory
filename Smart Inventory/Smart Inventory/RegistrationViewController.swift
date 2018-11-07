@@ -91,11 +91,7 @@ class RegistrationViewController: UIViewController{
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "register"{
-            
-            let user = User(user_id: userIdTF.text! ,name: firstNameTF.text! + " " + lastNameTF.text!,
-                            email:emailIdTF.text!, password: passwordTF.text!,
-                            mobile: Int(mobileNumberTF.text!) ?? 0,dob: dobTF.text!, address:Address(firstLine: addressTF.text! ,city: cityTF.text! , state: stateTF.text! , zip: Int(zipTF.text!)!))
-            UsersRepo.users.addUser(user)
+
             
             //saving user to Backendless
             //Established a connection , need to work

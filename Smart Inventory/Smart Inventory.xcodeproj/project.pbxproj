@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1B02F38A804E8ED0E8B9CF2B /* Pods_Smart_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */; };
-		3F4266F22175777E00747566 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4266F12175777E00747566 /* UserData.swift */; };
 		876CF7982167D4240015A6C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF7972167D4240015A6C8 /* RegistrationViewController.swift */; };
 		C79D808C216530F400A0AEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D808B216530F400A0AEFB /* AppDelegate.swift */; };
 		C79D808E216530F400A0AEFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D808D216530F400A0AEFB /* LoginViewController.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F4266F12175777E00747566 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Inventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E7F6C5E2C09410BB61ED25 /* Pods-Smart Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory.debug.xcconfig"; sourceTree = "<group>"; };
 		876CF7972167D4240015A6C8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				C79D808B216530F400A0AEFB /* AppDelegate.swift */,
 				C79D808D216530F400A0AEFB /* LoginViewController.swift */,
 				C79D808F216530F400A0AEFB /* Main.storyboard */,
-				3F4266F12175777E00747566 /* UserData.swift */,
 				C79D8092216530F500A0AEFB /* Assets.xcassets */,
 				C79D8094216530F500A0AEFB /* LaunchScreen.storyboard */,
 				C79D8097216530F500A0AEFB /* Info.plist */,
@@ -218,7 +215,6 @@
 			files = (
 				876CF7982167D4240015A6C8 /* RegistrationViewController.swift in Sources */,
 				C79D808E216530F400A0AEFB /* LoginViewController.swift in Sources */,
-				3F4266F22175777E00747566 /* UserData.swift in Sources */,
 				C79D808C216530F400A0AEFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
