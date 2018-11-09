@@ -65,6 +65,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-SW-xFS">
                                 <rect key="frame" x="234" y="535" width="79" height="31"/>
                                 <state key="normal" title="Click Here"/>
+                                <connections>
+                                    <segue destination="bRD-Tr-v5R" kind="show" id="2ht-1i-fZ0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWN-SI-O0M">
                                 <rect key="frame" x="80" y="540" width="146" height="21"/>
@@ -236,6 +239,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4v-07-KUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1580" y="1483.7438423645322"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="tUV-fM-EGh">
+            <objects>
+                <viewController id="bRD-Tr-v5R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v5U-2u-rN1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-vm-707">
+                                <rect key="frame" x="16" y="215" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eja-VJ-9Vh">
+                                <rect key="frame" x="45" y="292" width="263" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="6SK-k5-f2U" kind="unwind" unwindAction="resetPasswordWithSegue:" id="LYC-Uj-d8R"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-wB-9FM">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Reset Password" id="SHS-ju-x9n">
+                                        <rightBarButtonItems>
+                                            <barButtonItem id="tF6-14-SOH"/>
+                                            <barButtonItem title="Cancel" id="RE6-FR-r5W">
+                                                <connections>
+                                                    <segue destination="6SK-k5-f2U" kind="unwind" unwindAction="cancelResetWithSegue:" id="MYP-C3-itO"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mk5-rw-oC0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="fQB-7M-s5I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMA-7J-QxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6SK-k5-f2U" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="401.97044334975374"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m3I-gL-thN">
