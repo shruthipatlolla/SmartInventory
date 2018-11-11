@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var rememberMeSwitch: UISwitch!
     
     func display(title:String, msg:String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -28,14 +29,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtn(_ sender: Any) {
-        /* let isValid = true
         if let userName = userNameTF.text , let password = passwordTF.text, !userName.isEmpty, !password.isEmpty {
-            if (isValid){
-                display(title: "Wrong details", msg: "Please enter correct ID and password")
-            }
+            Backendless.sharedInstance().userService.login(userName, password: password, response: { user in
+                if self.rememberMeSwitch.isOn {
+                    Backendless.sharedInstance().userService.setStayLoggedIn(true)
+                }
+                if user != nil {
+                    self.performSegue(withIdentifier: "login", sender: user)
+                }
+            }, error: { fault in
+                self.display(title: "Login failed", msg: "Please enter valid details")
+                
+            })
+            
         } else {
             display(title: "Invalid Details", msg: "Please enter valid details")
-        } */
+        }
         
     }
     
@@ -45,6 +54,8 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+
     
 }
 
