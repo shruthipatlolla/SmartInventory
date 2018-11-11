@@ -28,14 +28,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtn(_ sender: Any) {
-        let isValid = true
+        /* let isValid = true
         if let userName = userNameTF.text , let password = passwordTF.text, !userName.isEmpty, !password.isEmpty {
             if (isValid){
                 display(title: "Wrong details", msg: "Please enter correct ID and password")
             }
         } else {
             display(title: "Invalid Details", msg: "Please enter valid details")
-        }
+        } */
         
     }
     
