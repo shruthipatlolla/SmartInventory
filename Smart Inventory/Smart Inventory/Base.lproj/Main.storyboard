@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +59,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dof-Vf-HFV"/>
-                                    <segue destination="6sH-hv-ztT" kind="show" id="rbn-dX-XFY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-SW-xFS">
@@ -82,15 +81,6 @@
                                     <segue destination="EEr-0J-DdQ" kind="show" id="O5c-Sl-f0O"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-Uy-36d">
-                                <rect key="frame" x="109" y="578" width="84" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7eL-GK-W9M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTm-59-NQB">
                                 <rect key="frame" x="300" y="378" width="51" height="31"/>
                             </switch>
@@ -98,6 +88,15 @@
                                 <rect key="frame" x="177" y="383" width="112" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="Trv-CX-33C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-Uy-36d">
+                                <rect key="frame" x="103" y="578" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7eL-GK-W9M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -120,7 +119,7 @@
                             <constraint firstItem="SWY-JT-2jB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Nzf-tu-jsJ"/>
                             <constraint firstItem="YF4-xg-1dl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="O4R-Qf-oO1"/>
                             <constraint firstItem="YF4-xg-1dl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Q96-Lh-VBe"/>
-                            <constraint firstItem="zqj-Uy-36d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="QBg-MQ-uJn"/>
+                            <constraint firstItem="zqj-Uy-36d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="QBg-MQ-uJn"/>
                             <constraint firstItem="NYS-gT-g23" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="63" id="Qu8-TH-Zul"/>
                             <constraint firstItem="zqj-Uy-36d" firstAttribute="top" secondItem="aWN-SI-O0M" secondAttribute="bottom" constant="17" id="RJi-Y9-hiJ"/>
                             <constraint firstItem="vcb-F4-R5e" firstAttribute="top" secondItem="bvs-SW-xFS" secondAttribute="bottom" constant="8" symbolic="YES" id="Rpw-6x-4JO"/>
@@ -139,7 +138,7 @@
                             <constraint firstItem="YF4-xg-1dl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="n9h-JV-7gK"/>
                             <constraint firstItem="v7t-ie-5j3" firstAttribute="leading" secondItem="9bk-QN-ySE" secondAttribute="leading" id="oT4-1z-3J7"/>
                             <constraint firstItem="v7t-ie-5j3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oy0-gD-FTe"/>
-                            <constraint firstItem="vcb-F4-R5e" firstAttribute="leading" secondItem="zqj-Uy-36d" secondAttribute="trailing" constant="8" symbolic="YES" id="p8O-Ng-WDK"/>
+                            <constraint firstItem="vcb-F4-R5e" firstAttribute="leading" secondItem="zqj-Uy-36d" secondAttribute="trailing" constant="8" id="p8O-Ng-WDK"/>
                             <constraint firstItem="gc1-ty-3Ol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="rxS-PX-WBv"/>
                             <constraint firstItem="YF4-xg-1dl" firstAttribute="leading" secondItem="vyM-TQ-g8a" secondAttribute="trailing" constant="-42" id="uGe-Nv-bkG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vcb-F4-R5e" secondAttribute="trailing" constant="110" id="xm9-kx-TMv"/>
@@ -152,6 +151,7 @@
                         <outlet property="passwordTF" destination="SWY-JT-2jB" id="T6N-te-OP2"/>
                         <outlet property="rememberMeSwitch" destination="zTm-59-NQB" id="KZ2-Ke-Iw9"/>
                         <outlet property="userNameTF" destination="v7t-ie-5j3" id="snH-ke-Lx2"/>
+                        <segue destination="6sH-hv-ztT" kind="show" identifier="login" id="Bi5-oh-3tp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
