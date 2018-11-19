@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy","Sign out"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,13 +30,15 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 6
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        
+        cell.textLabel?.text = items[indexPath.row]
+       
         // Configure the cell...
 
         return cell
