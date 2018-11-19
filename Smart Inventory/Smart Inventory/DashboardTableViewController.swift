@@ -39,10 +39,13 @@ class DashboardTableViewController: UITableViewController {
         let title = tableView.viewWithTag(100) as! UILabel!
         let desc = tableView.viewWithTag(200) as! UILabel!
         let image = tableView.viewWithTag(300) as! UIImageView!
+        let quantity = tableView.viewWithTag(400) as! UILabel!
+
         
-        image?.image = UIImage(named: "chat.jpg")
+        image?.image = UIImage(named: "iphone8")
         title?.text = "phone 8"
         desc?.text = "Refurbished Iphone 8, 64 GB"
+        quantity?.text = "Qunatity : 4"
         
         // Configure the cell...
         
