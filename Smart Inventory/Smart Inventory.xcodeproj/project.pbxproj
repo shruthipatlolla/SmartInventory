@@ -12,6 +12,7 @@
 		16E7DC022197E03900E40897 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7DC012197E03900E40897 /* UserProfileViewController.swift */; };
 		16E7DC042199241E00E40897 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E7DC032199241E00E40897 /* ForgotPasswordViewController.swift */; };
 		1B02F38A804E8ED0E8B9CF2B /* Pods_Smart_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */; };
+		3F3E41CF21B183A7006BB70D /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3E41CE21B183A7006BB70D /* ChatTableViewController.swift */; };
 		3F4FB0EB21A245E8000E2FBD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FB0EA21A245E8000E2FBD /* ProfileTableViewController.swift */; };
 		876CF7982167D4240015A6C8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF7972167D4240015A6C8 /* RegistrationViewController.swift */; };
 		C79D808C216530F400A0AEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D808B216530F400A0AEFB /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		1678E31221A268AF00436FD9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		16E7DC012197E03900E40897 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		16E7DC032199241E00E40897 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		3F3E41CE21B183A7006BB70D /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		3F4FB0EA21A245E8000E2FBD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		82B23A29C992CF26543FA343 /* Pods_Smart_Inventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Inventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E7F6C5E2C09410BB61ED25 /* Pods-Smart Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Inventory/Pods-Smart Inventory.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				C79D808D216530F400A0AEFB /* LoginViewController.swift */,
 				16E7DC032199241E00E40897 /* ForgotPasswordViewController.swift */,
 				C79D808F216530F400A0AEFB /* Main.storyboard */,
+				3F3E41CE21B183A7006BB70D /* ChatTableViewController.swift */,
 				3F4FB0EA21A245E8000E2FBD /* ProfileTableViewController.swift */,
 				C79D8092216530F500A0AEFB /* Assets.xcassets */,
 				C79D8094216530F500A0AEFB /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			files = (
 				1678E31121A2523D00436FD9 /* DashboardTableViewController.swift in Sources */,
 				1678E31321A268AF00436FD9 /* Product.swift in Sources */,
+				3F3E41CF21B183A7006BB70D /* ChatTableViewController.swift in Sources */,
 				3F4FB0EB21A245E8000E2FBD /* ProfileTableViewController.swift in Sources */,
 				876CF7982167D4240015A6C8 /* RegistrationViewController.swift in Sources */,
 				16E7DC042199241E00E40897 /* ForgotPasswordViewController.swift in Sources */,

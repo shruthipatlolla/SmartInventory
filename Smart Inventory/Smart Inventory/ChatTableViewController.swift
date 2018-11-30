@@ -1,16 +1,15 @@
 //
-//  ProfileTableViewController.swift
+//  ChatTableViewController.swift
 //  Smart Inventory
 //
-//  Created by student on 11/18/18.
+//  Created by student on 11/30/18.
 //  Copyright © 2018 Jennaikode,Vamshi Raj. All rights reserved.
 //
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
+class ChatTableViewController: UITableViewController {
 
-    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy","Sign out"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,10 +21,7 @@ class ProfileTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    @IBAction func LogoutBTN(_ sender: Any) {
-        Backendless.sharedInstance()!.userService.logout()
-    }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -33,21 +29,23 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 5
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
         
-        cell.textLabel?.text = items[indexPath.row]
-       
-        // Configure the cell...
+        cell.textLabel?.text = "Bob"
+        cell.detailTextLabel?.text = "Hi......"
 
         return cell
     }
-    
-    
+    @IBAction func chatDone(_ unwindSegue: UIStoryboardSegue) {
+        //let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
