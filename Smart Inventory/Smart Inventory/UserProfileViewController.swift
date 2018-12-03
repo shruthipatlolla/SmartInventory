@@ -17,6 +17,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var addres2: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
 
         // Do any additional setup after loading the view.
     }
