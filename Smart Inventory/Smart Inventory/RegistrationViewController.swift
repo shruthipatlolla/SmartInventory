@@ -82,10 +82,7 @@ class RegistrationViewController: UIViewController{
             //Established a connection , need to work
             let userBackend = BackendlessUser()
             
-            userBackend.name = fullNameTF.text! as NSString
-            userBackend.email = emailIdTF.text! as NSString
-            userBackend.password = passwordTF.text! as NSString
-            userBackend.setProperty("mobile", object: mobileNumberTF.text! as NSString)
+            userBackend.setProperties(["name": fullNameTF.text!, "email": emailIdTF.text! ,"password": passwordTF.text!, "mobile": mobileNumberTF.text!, "address": addressTF.text!, "city": cityTF.text!, "state": stateTF.text!, "zip": zipTF.text!])
             
             let registeredUser = self.backendless?.userService.register(userBackend)
             print("User has been registered (SYNC): \(String(describing: registeredUser))")
