@@ -277,10 +277,11 @@
             </objects>
             <point key="canvasLocation" x="1158" y="1484"/>
         </scene>
-        <!--DashBoard-->
+        <!--Profile-->
         <scene sceneID="P83-K8-dJG">
             <objects>
-                <viewController title="DashBoard" id="0zk-ud-0Bl" customClass="ProfileViewController" customModule="Smart_Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbx-86-6da" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="DashBoard" id="0zk-ud-0Bl" userLabel="Profile" customClass="UserProfileViewController" customModule="Smart_Inventory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i3w-M4-GWO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,15 +356,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0C-kC-oFC">
+                                <rect key="frame" x="166" y="518" width="183" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xJR-Kq-jPS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="businessman" id="Be0-pY-Mq2"/>
+                    <connections>
+                        <outlet property="addres2" destination="I0C-kC-oFC" id="FQS-sT-uOo"/>
+                        <outlet property="addressLBL" destination="P4U-CC-7QS" id="Uja-7E-9L9"/>
+                        <outlet property="emailLBL" destination="qyT-le-kj0" id="e4s-G5-2G2"/>
+                        <outlet property="nameLBL" destination="h5K-Dx-xSz" id="Dt5-X5-9ym"/>
+                        <outlet property="numberLBL" destination="xFR-FT-cX1" id="csS-sP-El9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cbx-86-6da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="1484"/>
+            <point key="canvasLocation" x="1948" y="1483.7438423645322"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yw4-c1-DOX">
@@ -777,6 +791,6 @@
         <image name="settings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RAs-ko-HsA"/>
+        <segue reference="xIl-QL-eNX"/>
     </inferredMetricsTieBreakers>
 </document>
