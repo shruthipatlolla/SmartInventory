@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
-    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy","Sign out"]
+    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +33,7 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return items.count
     }
 
 
