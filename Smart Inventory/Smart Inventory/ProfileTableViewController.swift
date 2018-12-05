@@ -10,7 +10,11 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    @IBAction func backToProfile(segue:UIStoryboardSegue){}
+    
     var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy"]
+    var segueIdentifiers = ["profile", "orders", "help", "terms", "policy"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
@@ -48,6 +52,9 @@ class ProfileTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifiers[indexPath.row], sender: self)
+    }
     
     /*
     // Override to support conditional editing of the table view.
