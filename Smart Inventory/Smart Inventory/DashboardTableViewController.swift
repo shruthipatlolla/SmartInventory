@@ -10,6 +10,12 @@ import UIKit
 
 class DashboardTableViewController: UITableViewController {
 
+    
+    var images = ["iphone8", "laptop", "iphone8"]
+    var titles = ["Iphone 8", "HP Laptop", "Iphone X"]
+    var descriptions = ["Refurbished Iphone 8, 64 GB", "HP Notebook , i3 Processor, 8 GB RAM, 256 GB", "New Iphone X, 256 GB"]
+    var quantities = ["Quantity : 4", "Qauntity : 1", "Quantity : 2"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
@@ -30,7 +36,7 @@ class DashboardTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return images.count
     }
 
     
@@ -43,10 +49,12 @@ class DashboardTableViewController: UITableViewController {
         let quantity = tableView.viewWithTag(400) as! UILabel!
 
         
-        image?.image = UIImage(named: "iphone8")
-        title?.text = "phone 8"
-        desc?.text = "Refurbished Iphone 8, 64 GB"
-        quantity?.text = "Qunatity : 4"
+        image?.image = UIImage(named: images[indexPath.row])
+        title?.text = titles[indexPath.row]
+        desc?.text = descriptions[indexPath.row]
+        quantity?.text = quantities[indexPath.row]
+        
+        
         
         // Configure the cell...
         
