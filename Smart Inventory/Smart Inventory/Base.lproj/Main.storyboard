@@ -302,6 +302,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No orders found ☹️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMS-jX-etu">
+                                <rect key="frame" x="16" y="369" width="343" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.76078431369999999" green="0.20493148189999999" blue="0.13001939009999999" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.76078431369999999" green="0.20493148189999999" blue="0.13001939009999999" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b3A-Yr-z1x"/>
@@ -310,7 +317,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCP-Z3-6c1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="noU-ba-eZm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="1198"/>
+            <point key="canvasLocation" x="2760.8000000000002" y="1197.7832512315272"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="phv-46-FLt">
