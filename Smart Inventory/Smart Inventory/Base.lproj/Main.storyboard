@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -273,7 +273,6 @@
                         <segue destination="0zk-ud-0Bl" kind="show" identifier="profile" id="viY-ZT-LuC"/>
                         <segue destination="v39-Zm-316" kind="show" identifier="orders" id="DgF-AI-Wo0"/>
                         <segue destination="UBJ-f5-SVi" kind="show" identifier="help" id="gVB-I9-WgQ"/>
-                        <segue destination="aeX-7b-WHl" kind="show" identifier="terms" id="tBO-1T-lhD"/>
                         <segue destination="3Vx-4z-wfo" kind="show" identifier="policy" id="C2u-SI-6j4"/>
                     </connections>
                 </tableViewController>
@@ -344,6 +343,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20X-ya-0Hz">
+                                <rect key="frame" x="16" y="118" width="343" height="633"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">This privacy notice discloses the privacy practices for Smart Inventory. This privacy notice applies solely to information collected by this application. It will notify you of the following:
+
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order.
+
+Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+
+If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at 660 528-0403 or via email smartinventory@gmail.com.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EsM-Vv-bGK"/>
@@ -352,7 +374,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpL-qj-ZWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fzU-iT-6b4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="977" y="2411"/>
+            <point key="canvasLocation" x="976.79999999999995" y="2410.344827586207"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cBA-SN-fln">
@@ -375,6 +397,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfw-aA-Ztw">
+                                <rect key="frame" x="16" y="125" width="343" height="628"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The inventory system is a mobile application which helps a store owner to manage his online business.
+The Owner and the Seller can communicate through the application.
+The application will manages the shipping labels, product details, orders and transaction details.
+
+
+
+
+contact us via telephone at 660 528-0403 or via email smartinventory@gmail.com.</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HZw-vG-4Qm"/>
@@ -383,7 +428,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQW-T2-hel" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GfD-YI-bO9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="2015"/>
+            <point key="canvasLocation" x="2892" y="2014.2857142857144"/>
         </scene>
         <!--Profile-->
         <scene sceneID="P83-K8-dJG">
@@ -891,37 +936,6 @@
                 <exit id="UDe-hN-cc8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="-36.206896551724142"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="IbH-op-gqd">
-            <objects>
-                <viewController id="aeX-7b-WHl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hWQ-W7-zHJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSG-XY-LnK">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Terms of Services" id="m9N-JV-HFe">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Mmz-e6-8pT">
-                                            <connections>
-                                                <segue destination="sFG-Ch-dSV" kind="unwind" unwindAction="backToProfileWithSegue:" id="v0X-Hb-Mgm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xEY-WI-cx6"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AkA-53-mTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sFG-Ch-dSV" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2015" y="2439"/>
         </scene>
     </scenes>
     <resources>

@@ -12,8 +12,8 @@ class ProfileTableViewController: UITableViewController {
 
     @IBAction func backToProfile(segue:UIStoryboardSegue){}
     
-    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy"]
-    var segueIdentifiers = ["profile", "orders", "help", "terms", "policy"]
+    var items:[String] = ["Account Details", "Orders", "Help", "Privacy Policy"]
+    var segueIdentifiers = ["profile", "orders", "help", "policy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
