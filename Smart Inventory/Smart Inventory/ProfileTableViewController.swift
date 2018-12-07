@@ -12,12 +12,12 @@ class ProfileTableViewController: UITableViewController {
 
     @IBAction func backToProfile(segue:UIStoryboardSegue){}
     
-    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy"]
-    var segueIdentifiers = ["profile", "orders", "help", "terms", "policy"]
+    var items:[String] = ["Account Details", "Orders", "Help","Terms of Service", "Privacy Policy", "Log Out"]
+    var segueIdentifiers = ["profile", "orders", "help", "terms", "policy", "logout"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbg.jpg")!)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
